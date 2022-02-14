@@ -3,7 +3,9 @@ package com.v1.api.exoplanet.model;
 import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+@JsonDeserialize
 public class Exoplanetas implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -20,6 +22,19 @@ public class Exoplanetas implements Serializable {
 	
 	@JsonProperty("dec")
 	private Double dec;
+	
+	public Exoplanetas() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Exoplanetas(Long id, String nome, Double massa, Integer ra, Double dec) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.massa = massa;
+		this.ra = ra;
+		this.dec = dec;
+	}
 
 	public Long getId() {
 		return id;

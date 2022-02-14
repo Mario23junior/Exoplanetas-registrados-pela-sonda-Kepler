@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
-import com.v1.api.exoplanet.model.Exoplanetas;
+import com.v1.api.exoplanet.model.ExoplanetaResponse;
 import com.v1.api.exoplanet.service.ExoplanetServiceAcess;
 
 @RestController
@@ -19,8 +19,8 @@ public class ControllerExoplanet {
     	
  
 	@GetMapping
-	public Exoplanetas listAll() throws JsonMappingException, JsonProcessingException {
-		Exoplanetas bodyResponse = service.detailsApiParameter();
+	public ExoplanetaResponse listAll() throws JsonMappingException, JsonProcessingException {
+		ExoplanetaResponse bodyResponse = service.detailsApiParameter();
 	return bodyResponse;
 
 	}
