@@ -1,8 +1,5 @@
 package com.v1.api.exoplanet.service;
 
-import java.util.Arrays;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
@@ -35,11 +32,9 @@ public class ExoplanetServiceAcess {
     		.bodyToMono(Exoplanetas.class);
    
     Exoplanetas responseBody = monoRequest.block();
-    System.out.println(responseBody);
+    System.out.println(responseBody.toString());
     
-    List<Mono<Exoplanetas>> videoList = Arrays.asList(monoRequest);
-    System.out.println(videoList);
-
+    
 	return responseBody;
 	}	
 } 
