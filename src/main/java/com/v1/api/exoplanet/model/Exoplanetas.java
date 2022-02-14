@@ -1,9 +1,12 @@
 package com.v1.api.exoplanet.model;
 
+import java.io.Serializable;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Exoplanetas {
-   
+public class Exoplanetas implements Serializable {
+	private static final long serialVersionUID = 1L;
+
 	private Long id;
 	
 	@JsonProperty("pl_name")
@@ -57,7 +60,8 @@ public class Exoplanetas {
 	public void setDec(Double dec) {
 		this.dec = dec;
 	}
-	
-	
-	
-}
+
+	@Override
+	public String toString() {
+		return "Exoplanetas [id=" + id + ", nome=" + nome + ", massa=" + massa + ", ra=" + ra + ", dec=" + dec + "]";
+	}}
