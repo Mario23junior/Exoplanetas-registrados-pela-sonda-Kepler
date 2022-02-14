@@ -13,9 +13,10 @@ API REST de código aberto para dados de consulta de  pesquisa  as informaçõ
 <a href="https://en.wikipedia.org/wiki/Representational_state_transfer"><img src="https://img.shields.io/badge/interface-REST-brightgreen.svg?longCache=true&style=flat-square" target="_blank"></a>
 </p>
 
-## Resultado dos dados da API
+<!-- ## Resultado dos dados da API
 
 ```json
 
 
 ```
+ -->
