@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.v1.api.exoplanet.model.Exoplanetas;
+import com.v1.api.exoplanet.model.ExoplanetDataResponse;
 import com.v1.api.exoplanet.service.ExoplanetServiceAcess;
 
 @RestController
@@ -13,17 +13,15 @@ import com.v1.api.exoplanet.service.ExoplanetServiceAcess;
 public class ControllerExoplanet { 
 	
 	@Autowired
-	private ExoplanetServiceAcess service;
-	
-//	public void setService(ExoplanetServiceAcess service) {
-//		this.service = service;
-//	}
-
-	@GetMapping("/info")
-	public Exoplanetas listAll() {
-	Exoplanetas bodyResponse = service.detailsApiParameter();
+ 	private ExoplanetServiceAcess service;
+    	
+ 
+	@GetMapping
+	public ExoplanetDataResponse listAll() {
+	ExoplanetDataResponse bodyResponse = service.detailsApiParameter();
 	return bodyResponse;
 
 	}
 
 }
+

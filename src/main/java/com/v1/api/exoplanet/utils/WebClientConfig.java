@@ -12,7 +12,7 @@ public class WebClientConfig {
 	@Bean
 	public WebClient webClient(WebClient.Builder builder) {
 		return builder
-				   .baseUrl("https://exoplanetarchive.ipac.caltech.edu/")
+				   .baseUrl("https://exoplanetarchive.ipac.caltech.edu")
  				   .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
 				   .build();
 	}
